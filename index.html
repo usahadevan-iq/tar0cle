@@ -5,51 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tar0cle : Wisdom. One spread at a time.</title>
    
-    <style>
-        body {
-            background-color: "#530e71";
-        }
-
-            <title>Welcome to Tar0cle</title>
-    
-    <!-- This is the HTML link tag to include the Playfair Display font -->
+    <!-- Google Fonts link for Playfair Display -->
+    <!-- Added font-weight 300 so it can be used for h2 if desired -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <!-- This is the CSS to apply the Playfair Display font to the h1 tag -->
     <style>
         body {
+            background-color: #530e71; /* Dark purple background - removed quotes */
+            color: #FFFFFF; /* All text on the body will be white by default */
+            font-family: 'Playfair Display', serif; /* Default font for the body */
             display: flex; /* For centering content */
+            flex-direction: column; /* Arrange children vertically */
             justify-content: center;
             align-items: center;
             min-height: 100vh; /* Make body at least viewport height */
             margin: 0;
-            color: #FFFFFF;
+            padding: 20px; /* Add some padding around the content */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            text-align: center; /* Center all inline text within the flex container */
         }
-        h1 {
-            font-family: 'Playfair Display', serif; /* Apply Playfair Display */
-            font-weight: 700; /* Use the bold weight */
-            font-size: 5em; /* Large text size */
-            color: #FFFFFF; /* Golden text color */
-            text-align: center;
-        }
-          h2 {
-            font-family: 'Playfair Display', serif; /* Apply Playfair Display */
-            font-weight: 300; /* Use the bold weight */
-            font-size: 2em; /* Large text size */
-            color: #FFFFFF; /* Golden text color */
-            text-align: center;}
-          </style>
-    </style>
-
-   
         
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700; /* Bold weight */
+            font-size: 5em; /* Large text size */
+            color: #FFFFFF; /* Explicitly white, but inherits from body */
+            margin-bottom: 0.1em; /* Adjust spacing below h1 */
+        }
+          
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300; /* Light weight - now included in link */
+            font-size: 2em; /* Good size for a subheading */
+            color: #FFFFFF; /* Explicitly white, but inherits from body */
+            margin-top: 0; /* Remove default top margin */
+            margin-bottom: 1.5em; /* Spacing below h2 */
+        }
+
+        p {
+            font-family: 'Playfair Display', serif; /* Use Playfair Display for paragraphs */
+            font-weight: 400; /* Regular weight */
+            font-size: 1.2em; /* Readable paragraph size */
+            line-height: 1.6; /* Improve readability of text */
+            max-width: 600px; /* Limit paragraph width for better readability */
+        }
+    </style>
 </head>
 <body>
-   <H1> Welcome to Tar0cle </H1><br>
-    <H2> Wisdom. One spread at a time. </H2><br>
+   <h1>Welcome to Tar0cle</h1>
+    <h2>Wisdom. One spread at a time.</h2>
     
-   <br> A mystical Tarot reading service, that provides insightful interpretations on varied spreads. Try a free 1-card mini-reading or choose to have have a personalized reading for specific insights. 
+    <p>A mystical Tarot reading service that provides insightful interpretations on varied spreads. Try a free 1-card mini-reading or choose to have a personalized reading for specific insights.</p>
 </body>
 </html>
