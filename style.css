@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars from showing */
+}
+
+#game-container {
+    width: 600px;
+    height: 200px;
+    border: 5px solid #61dafb;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(97, 218, 251, 0.7);
+}
+
+#character {
+    width: 40px;
+    height: 70px; /* Adjusted height for a more human-like character */
+    background-color: #e0ac69; /* Skin tone */
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    /* Basic representation of a Tarot Reader */
+    /* Head */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 5px;
+        width: 30px;
+        height: 20px;
+        background-color: #e0ac69;
+        border-radius: 50%;
+        border: 1px solid #c9935f;
+    }
+    /* Hair */
+    &::after {
+        content: '';
+        position: absolute;
+        top: -25px;
+        left: 0;
+        width: 40px;
+        height: 25px;
+        background-color: #333; /* Dark hair */
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+}
+
+.jump {
+    animation: jump 0.6s ease-out forwards;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    40% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+#obstacle {
+    width: 20px;
+    height: 40px;
+    background-color: #d32f2f; /* Red obstacle */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: moveObstacle 2s linear infinite;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+}
+
+@keyframes moveObstacle {
+    0% { right: 0; }
+    100% { right: 620px; /* Off screen to the left + its own width */ }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8em;
+    color: #d32f2f;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #d32f2f;
+    box-shadow: 0 0 15px rgba(211, 47, 47, 0.7);
+}
+
+.hidden {
+    display: none;
+}
